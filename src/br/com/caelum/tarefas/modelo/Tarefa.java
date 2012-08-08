@@ -4,6 +4,8 @@ import java.util.Calendar;
 
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.sun.istack.internal.NotNull;
 
 public class Tarefa {
@@ -12,6 +14,8 @@ public class Tarefa {
 	@NotNull @Size(min=5)
 	private String descricao;
 	private boolean finalizado;
+	
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Calendar dataFinalizacao;
 
 	public Long getId() {

@@ -120,7 +120,7 @@ public class TarefaDAO {
                }
                
                String sql = "update tarefas set finalizado = ?, dataFinalizacao = ? where id = ?";
-               tarefasPreparedStatement stmt;
+               PreparedStatement stmt;
                try {
                        stmt = connection.prepareStatement(sql);
                        stmt.setBoolean(1, true);
