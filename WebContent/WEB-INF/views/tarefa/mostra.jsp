@@ -7,8 +7,7 @@
 			
 			<input type="hidden" name="id" value="${tarefa.id}" />
 			Descricao:<br />
-			<textarea name ="descricao" cols="100" rows="5">
-				${tarefa.descricao}
+			<textarea name ="descricao" cols="100" rows="5">${tarefa.descricao}
 			</textarea>
 			<br />
 			
