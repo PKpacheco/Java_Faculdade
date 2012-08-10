@@ -17,6 +17,7 @@
 		</script>
 	
 		<a href="novaTarefa">Criar nova tarefa</a>
+		<a href="logout">Logout</a>
 		<br /><br />
 		
 		<table>

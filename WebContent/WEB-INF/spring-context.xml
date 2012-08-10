@@ -19,5 +19,11 @@
 	</bean>
 	
 	<mvc:resources location="/resources/" mapping="/resources/**"/>
+	
+	<mvc:interceptors>
+		<bean
+		class="br.com.caelum.tarefas.interceptor.AutorizadorInterceptor" />
+	</mvc:interceptors>
+	<mvc:view-controller path="/" view-name="loginForm"/>
 
 </beans>

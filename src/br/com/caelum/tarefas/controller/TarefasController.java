@@ -1,6 +1,7 @@
 package br.com.caelum.tarefas.controller;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -65,5 +66,11 @@ public class TarefasController {
 		TarefaDAO dao = new TarefaDAO();
 		dao.finaliza(id);
 		response.setStatus(200);
+	}
+	
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "reddirect:loginForm";
 	}
 }
